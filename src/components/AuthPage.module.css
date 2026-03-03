@@ -1,0 +1,172 @@
+.backdrop {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+  border: 1px solid #334155;
+  border-radius: 24px;
+  padding: 40px 36px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.heading {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #818CF8, #38BDF8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub {
+  margin: 0 0 28px;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputWrap {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px 12px 42px;
+  background: #0F172A;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  color: #E2E8F0;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #818CF8;
+}
+
+.input::placeholder {
+  color: #475569;
+}
+
+.submit {
+  margin-top: 4px;
+  padding: 12px;
+  background: linear-gradient(135deg, #818CF8, #6366F1);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+.error {
+  background: #7F1D1D40;
+  border: 1px solid #DC262640;
+  color: #FCA5A5;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.inputMatch {
+  composes: input;
+  border-color: #22C55E;
+}
+
+.inputMismatch {
+  composes: input;
+  border-color: #EF4444;
+}
+
+.matchHint {
+  font-size: 12px;
+  margin: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.matchHintOk {
+  composes: matchHint;
+  color: #4ADE80;
+}
+
+.matchHintBad {
+  composes: matchHint;
+  color: #F87171;
+}
+
+.toggle {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.toggleLink {
+  background: none;
+  border: none;
+  color: #818CF8;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.toggleLink:hover {
+  color: #A5B4FC;
+}
+
+.author {
+  margin: 20px 0 0;
+  font-size: 11px;
+  color: #39FF14;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,130 @@
+.shell {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  min-height: 100vh;
+  color: #E2E8F0;
+  padding: 24px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.backBtn {
+  background: #334155;
+  border: none;
+  color: #E2E8F0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filterBtn {
+  border: 1px solid #334155;
+  color: #E2E8F0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  background: #1E293B;
+}
+
+.filterBtnActive {
+  composes: filterBtn;
+  border-color: transparent;
+  background: #6366F1;
+}
+
+.filterBtnActive[data-cat="Phrasal Verb"] { background: #4F46E5; }
+.filterBtnActive[data-cat="Adjective"]    { background: #0891B2; }
+.filterBtnActive[data-cat="Verb"]         { background: #059669; }
+.filterBtnActive[data-cat="Noun"]         { background: #D97706; }
+.filterBtnActive[data-cat="Adverb"]       { background: #DC2626; }
+.filterBtnActive[data-cat="Noun/Verb"]    { background: #7C3AED; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #1E293B;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardEmoji {
+  font-size: 28px;
+}
+
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardWord {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.cardCat {
+  color: #fff;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+  background: #6B7280;
+}
+
+.cardCat[data-cat="Phrasal Verb"] { background: #4F46E5; }
+.cardCat[data-cat="Adjective"]    { background: #0891B2; }
+.cardCat[data-cat="Verb"]         { background: #059669; }
+.cardCat[data-cat="Noun"]         { background: #D97706; }
+.cardCat[data-cat="Adverb"]       { background: #DC2626; }
+.cardCat[data-cat="Noun/Verb"]    { background: #7C3AED; }
+
+.cardStatus {
+  font-size: 14px;
+}
+
+.cardMeta {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-top: 2px;
+}

@@ -1,0 +1,1379 @@
+{
+  "id": "a1",
+  "name": "A1 - Elementary",
+  "description": "80 basic words: nouns, verbs, adjectives, adverbs and common phrases for beginners.",
+  "words": [
+    {
+      "id": 1,
+      "word": "house",
+      "pron": "/haʊs/",
+      "emoji": "🏠",
+      "cat": "Noun",
+      "es": "casa",
+      "ex": [
+        "I live in a small house.",
+        "The house has three bedrooms.",
+        "Her house is near the park.",
+        "We painted the house white.",
+        "They bought a new house last year.",
+        "The house is very old."
+      ]
+    },
+    {
+      "id": 2,
+      "word": "water",
+      "pron": "/ˈwɔːtər/",
+      "emoji": "💧",
+      "cat": "Noun",
+      "es": "agua",
+      "ex": [
+        "Can I have a glass of water?",
+        "The water is very cold.",
+        "I drink water every day.",
+        "There is no water in the bottle.",
+        "The children are playing in the water.",
+        "We need clean water to cook."
+      ]
+    },
+    {
+      "id": 3,
+      "word": "food",
+      "pron": "/fuːd/",
+      "emoji": "🍽️",
+      "cat": "Noun",
+      "es": "comida",
+      "ex": [
+        "The food is delicious.",
+        "We need to buy food for dinner.",
+        "Italian food is my favorite.",
+        "There is no food in the fridge.",
+        "She loves healthy food.",
+        "The food at this restaurant is great."
+      ]
+    },
+    {
+      "id": 4,
+      "word": "family",
+      "pron": "/ˈfæm.əl.i/",
+      "emoji": "👨‍👩‍👧‍👦",
+      "cat": "Noun",
+      "es": "familia",
+      "ex": [
+        "My family is very big.",
+        "I love my family.",
+        "We visit our family on Sundays.",
+        "Her family lives in Spain.",
+        "Family is the most important thing.",
+        "The whole family went on vacation."
+      ]
+    },
+    {
+      "id": 5,
+      "word": "friend",
+      "pron": "/frɛnd/",
+      "emoji": "🤝",
+      "cat": "Noun",
+      "es": "amigo/a",
+      "ex": [
+        "She is my best friend.",
+        "I met a new friend at school.",
+        "My friend lives in London.",
+        "He is a very good friend.",
+        "I called my friend yesterday.",
+        "We have been friends for ten years."
+      ]
+    },
+    {
+      "id": 6,
+      "word": "school",
+      "pron": "/skuːl/",
+      "emoji": "🏫",
+      "cat": "Noun",
+      "es": "escuela",
+      "ex": [
+        "I go to school every day.",
+        "The school is near my house.",
+        "She likes her new school.",
+        "School starts at eight o'clock.",
+        "The children walk to school.",
+        "He teaches at a big school."
+      ]
+    },
+    {
+      "id": 7,
+      "word": "book",
+      "pron": "/bʊk/",
+      "emoji": "📖",
+      "cat": "Noun",
+      "es": "libro",
+      "ex": [
+        "I am reading a good book.",
+        "This book is very interesting.",
+        "She bought a new book yesterday.",
+        "The book is on the table.",
+        "He writes books for children.",
+        "Can I borrow your book?"
+      ]
+    },
+    {
+      "id": 8,
+      "word": "car",
+      "pron": "/kɑːr/",
+      "emoji": "🚗",
+      "cat": "Noun",
+      "es": "coche / carro",
+      "ex": [
+        "My car is blue.",
+        "He drives his car to work.",
+        "The car is very fast.",
+        "We bought a new car.",
+        "The car is parked outside.",
+        "She washes her car every weekend."
+      ]
+    },
+    {
+      "id": 9,
+      "word": "dog",
+      "pron": "/dɒɡ/",
+      "emoji": "🐕",
+      "cat": "Noun",
+      "es": "perro",
+      "ex": [
+        "I have a big dog.",
+        "The dog is very friendly.",
+        "My dog likes to play in the park.",
+        "She walks her dog every morning.",
+        "The dog is sleeping on the sofa.",
+        "We adopted a dog last month."
+      ]
+    },
+    {
+      "id": 10,
+      "word": "cat",
+      "pron": "/kæt/",
+      "emoji": "🐱",
+      "cat": "Noun",
+      "es": "gato",
+      "ex": [
+        "The cat is on the bed.",
+        "My cat is black and white.",
+        "She has two cats at home.",
+        "The cat likes to drink milk.",
+        "Our cat is very lazy.",
+        "The cat caught a mouse."
+      ]
+    },
+    {
+      "id": 11,
+      "word": "money",
+      "pron": "/ˈmʌn.i/",
+      "emoji": "💰",
+      "cat": "Noun",
+      "es": "dinero",
+      "ex": [
+        "I don't have enough money.",
+        "She saves money every month.",
+        "Money is not everything.",
+        "He lost his money at the market.",
+        "How much money do you need?",
+        "They spend a lot of money on food."
+      ]
+    },
+    {
+      "id": 12,
+      "word": "city",
+      "pron": "/ˈsɪt.i/",
+      "emoji": "🏙️",
+      "cat": "Noun",
+      "es": "ciudad",
+      "ex": [
+        "I live in a big city.",
+        "The city is very noisy.",
+        "New York is a famous city.",
+        "She moved to a new city.",
+        "The city center is beautiful.",
+        "There are many people in this city."
+      ]
+    },
+    {
+      "id": 13,
+      "word": "phone",
+      "pron": "/foʊn/",
+      "emoji": "📱",
+      "cat": "Noun",
+      "es": "teléfono",
+      "ex": [
+        "My phone is broken.",
+        "Can I use your phone?",
+        "She bought a new phone.",
+        "The phone is ringing.",
+        "I lost my phone yesterday.",
+        "He always looks at his phone."
+      ]
+    },
+    {
+      "id": 14,
+      "word": "morning",
+      "pron": "/ˈmɔːr.nɪŋ/",
+      "emoji": "🌅",
+      "cat": "Noun",
+      "es": "mañana",
+      "ex": [
+        "I wake up early in the morning.",
+        "Good morning! How are you?",
+        "The morning is cold today.",
+        "She runs every morning.",
+        "We have class in the morning.",
+        "The sun rises in the morning."
+      ]
+    },
+    {
+      "id": 15,
+      "word": "night",
+      "pron": "/naɪt/",
+      "emoji": "🌙",
+      "cat": "Noun",
+      "es": "noche",
+      "ex": [
+        "Good night! Sleep well.",
+        "The night is very dark.",
+        "I study at night.",
+        "We went out last night.",
+        "The stars shine at night.",
+        "She works at night."
+      ]
+    },
+    {
+      "id": 16,
+      "word": "doctor",
+      "pron": "/ˈdɒk.tər/",
+      "emoji": "👨‍⚕️",
+      "cat": "Noun",
+      "es": "doctor/a",
+      "ex": [
+        "I need to see a doctor.",
+        "The doctor is very nice.",
+        "She wants to be a doctor.",
+        "The doctor gave me medicine.",
+        "My doctor says I am healthy.",
+        "He went to the doctor yesterday."
+      ]
+    },
+    {
+      "id": 17,
+      "word": "teacher",
+      "pron": "/ˈtiːtʃ.ər/",
+      "emoji": "👩‍🏫",
+      "cat": "Noun",
+      "es": "profesor/a",
+      "ex": [
+        "My teacher is very kind.",
+        "The teacher explains very well.",
+        "She is an English teacher.",
+        "The teacher gave us homework.",
+        "I like my new teacher.",
+        "He became a teacher last year."
+      ]
+    },
+    {
+      "id": 18,
+      "word": "table",
+      "pron": "/ˈteɪ.bəl/",
+      "emoji": "🪑",
+      "cat": "Noun",
+      "es": "mesa",
+      "ex": [
+        "The book is on the table.",
+        "We eat dinner at the table.",
+        "She cleaned the table after lunch.",
+        "There are four chairs at the table.",
+        "He put his keys on the table.",
+        "The table is made of wood."
+      ]
+    },
+    {
+      "id": 19,
+      "word": "door",
+      "pron": "/dɔːr/",
+      "emoji": "🚪",
+      "cat": "Noun",
+      "es": "puerta",
+      "ex": [
+        "Please close the door.",
+        "The door is open.",
+        "Someone is knocking on the door.",
+        "I locked the door before leaving.",
+        "The door is made of wood.",
+        "Open the door, please!"
+      ]
+    },
+    {
+      "id": 20,
+      "word": "window",
+      "pron": "/ˈwɪn.doʊ/",
+      "emoji": "🪟",
+      "cat": "Noun",
+      "es": "ventana",
+      "ex": [
+        "Open the window, please.",
+        "I can see the garden from the window.",
+        "The window is broken.",
+        "She closed the window because it was cold.",
+        "The bird is sitting on the window.",
+        "There are three windows in this room."
+      ]
+    },
+    {
+      "id": 21,
+      "word": "eat",
+      "pron": "/iːt/",
+      "emoji": "🍴",
+      "cat": "Verb",
+      "es": "comer",
+      "past": "ate",
+      "pastPron": "/eɪt/",
+      "pp": "eaten",
+      "ppPron": "/ˈiːt.ən/",
+      "ex": [
+        "I eat breakfast at seven.",
+        "What do you want to eat?",
+        "She eats lunch at school.",
+        "We ate pizza last night.",
+        "He doesn't eat meat.",
+        "The children eat a lot of fruit."
+      ]
+    },
+    {
+      "id": 22,
+      "word": "drink",
+      "pron": "/drɪŋk/",
+      "emoji": "🥤",
+      "cat": "Verb",
+      "es": "beber",
+      "past": "drank",
+      "pastPron": "/dræŋk/",
+      "pp": "drunk",
+      "ppPron": "/drʌŋk/",
+      "ex": [
+        "I drink coffee every morning.",
+        "Would you like something to drink?",
+        "She drinks a lot of water.",
+        "He drank all the juice.",
+        "We drink tea in the afternoon.",
+        "Don't drink too much soda."
+      ]
+    },
+    {
+      "id": 23,
+      "word": "sleep",
+      "pron": "/sliːp/",
+      "emoji": "😴",
+      "cat": "Verb",
+      "es": "dormir",
+      "past": "slept",
+      "pastPron": "/slɛpt/",
+      "pp": "slept",
+      "ppPron": "/slɛpt/",
+      "ex": [
+        "I sleep eight hours every night.",
+        "The baby is sleeping.",
+        "She slept very well last night.",
+        "He can't sleep without a pillow.",
+        "I need to sleep more.",
+        "The dog sleeps on the floor."
+      ]
+    },
+    {
+      "id": 24,
+      "word": "go",
+      "pron": "/ɡoʊ/",
+      "emoji": "🚶",
+      "cat": "Verb",
+      "es": "ir",
+      "past": "went",
+      "pastPron": "/wɛnt/",
+      "pp": "gone",
+      "ppPron": "/ɡɒn/",
+      "ex": [
+        "I go to work every day.",
+        "Where do you want to go?",
+        "She goes to the gym on Mondays.",
+        "We went to the beach yesterday.",
+        "He has gone home.",
+        "Let's go to the park!"
+      ]
+    },
+    {
+      "id": 25,
+      "word": "come",
+      "pron": "/kʌm/",
+      "emoji": "👋",
+      "cat": "Verb",
+      "es": "venir",
+      "past": "came",
+      "pastPron": "/keɪm/",
+      "pp": "come",
+      "ppPron": "/kʌm/",
+      "ex": [
+        "Come here, please.",
+        "She comes to class every day.",
+        "He came late to the meeting.",
+        "Can you come to my party?",
+        "They came from Mexico.",
+        "The bus is coming."
+      ]
+    },
+    {
+      "id": 26,
+      "word": "see",
+      "pron": "/siː/",
+      "emoji": "👀",
+      "cat": "Verb",
+      "es": "ver",
+      "past": "saw",
+      "pastPron": "/sɔː/",
+      "pp": "seen",
+      "ppPron": "/siːn/",
+      "ex": [
+        "I can see the mountains from here.",
+        "Did you see the movie?",
+        "She saw her friend at the store.",
+        "I want to see you tomorrow.",
+        "He has never seen the ocean.",
+        "Can you see that bird?"
+      ]
+    },
+    {
+      "id": 27,
+      "word": "know",
+      "pron": "/noʊ/",
+      "emoji": "🧠",
+      "cat": "Verb",
+      "es": "saber / conocer",
+      "past": "knew",
+      "pastPron": "/njuː/",
+      "pp": "known",
+      "ppPron": "/noʊn/",
+      "ex": [
+        "I know the answer.",
+        "Do you know her name?",
+        "She knows how to cook.",
+        "He didn't know about the party.",
+        "I know this city very well.",
+        "They have known each other for years."
+      ]
+    },
+    {
+      "id": 28,
+      "word": "want",
+      "pron": "/wɒnt/",
+      "emoji": "🙏",
+      "cat": "Verb",
+      "es": "querer",
+      "past": "wanted",
+      "pastPron": "/ˈwɒn.tɪd/",
+      "pp": "wanted",
+      "ppPron": "/ˈwɒn.tɪd/",
+      "ex": [
+        "I want a glass of water.",
+        "What do you want for dinner?",
+        "She wants to learn English.",
+        "He wanted to go home early.",
+        "Do you want to come with us?",
+        "They don't want to wait."
+      ]
+    },
+    {
+      "id": 29,
+      "word": "like",
+      "pron": "/laɪk/",
+      "emoji": "❤️",
+      "cat": "Verb",
+      "es": "gustar",
+      "past": "liked",
+      "pastPron": "/laɪkt/",
+      "pp": "liked",
+      "ppPron": "/laɪkt/",
+      "ex": [
+        "I like chocolate ice cream.",
+        "She likes to read books.",
+        "Do you like this song?",
+        "He likes playing soccer.",
+        "We liked the movie a lot.",
+        "They don't like cold weather."
+      ]
+    },
+    {
+      "id": 30,
+      "word": "work",
+      "pron": "/wɜːrk/",
+      "emoji": "💼",
+      "cat": "Noun/Verb",
+      "es": "trabajo / trabajar",
+      "past": "worked",
+      "pastPron": "/wɜːrkt/",
+      "pp": "worked",
+      "ppPron": "/wɜːrkt/",
+      "ex": [
+        "I work in an office.",
+        "She works from Monday to Friday.",
+        "He worked very hard yesterday.",
+        "Where do you work?",
+        "I have a lot of work today.",
+        "They work together as a team."
+      ]
+    },
+    {
+      "id": 31,
+      "word": "talk",
+      "pron": "/tɔːk/",
+      "emoji": "🗣️",
+      "cat": "Verb",
+      "es": "hablar",
+      "past": "talked",
+      "pastPron": "/tɔːkt/",
+      "pp": "talked",
+      "ppPron": "/tɔːkt/",
+      "ex": [
+        "Can we talk for a minute?",
+        "She talks very fast.",
+        "He talked to his boss yesterday.",
+        "I like to talk with my friends.",
+        "Don't talk during the class.",
+        "We talked on the phone last night."
+      ]
+    },
+    {
+      "id": 32,
+      "word": "give",
+      "pron": "/ɡɪv/",
+      "emoji": "🎁",
+      "cat": "Verb",
+      "es": "dar",
+      "past": "gave",
+      "pastPron": "/ɡeɪv/",
+      "pp": "given",
+      "ppPron": "/ˈɡɪv.ən/",
+      "ex": [
+        "Can you give me a pen?",
+        "She gave me a present.",
+        "I want to give you something.",
+        "He gives money to charity.",
+        "They gave us good advice.",
+        "Please give me your number."
+      ]
+    },
+    {
+      "id": 33,
+      "word": "take",
+      "pron": "/teɪk/",
+      "emoji": "✋",
+      "cat": "Verb",
+      "es": "tomar / llevar",
+      "past": "took",
+      "pastPron": "/tʊk/",
+      "pp": "taken",
+      "ppPron": "/ˈteɪ.kən/",
+      "ex": [
+        "Take your umbrella, it's raining.",
+        "She took the bus to school.",
+        "Can I take a photo?",
+        "He takes a shower every morning.",
+        "I took my dog to the vet.",
+        "Please take a seat."
+      ]
+    },
+    {
+      "id": 34,
+      "word": "make",
+      "pron": "/meɪk/",
+      "emoji": "🔨",
+      "cat": "Verb",
+      "es": "hacer / preparar",
+      "past": "made",
+      "pastPron": "/meɪd/",
+      "pp": "made",
+      "ppPron": "/meɪd/",
+      "ex": [
+        "She makes coffee every morning.",
+        "I made dinner last night.",
+        "He makes beautiful drawings.",
+        "Can you make a cake?",
+        "We made a big mistake.",
+        "They make shoes in this factory."
+      ]
+    },
+    {
+      "id": 35,
+      "word": "buy",
+      "pron": "/baɪ/",
+      "emoji": "🛒",
+      "cat": "Verb",
+      "es": "comprar",
+      "past": "bought",
+      "pastPron": "/bɔːt/",
+      "pp": "bought",
+      "ppPron": "/bɔːt/",
+      "ex": [
+        "I want to buy a new shirt.",
+        "She bought a present for her mom.",
+        "Where did you buy that?",
+        "We need to buy some milk.",
+        "He buys coffee every day.",
+        "They bought a new house."
+      ]
+    },
+    {
+      "id": 36,
+      "word": "play",
+      "pron": "/pleɪ/",
+      "emoji": "⚽",
+      "cat": "Verb",
+      "es": "jugar / tocar",
+      "past": "played",
+      "pastPron": "/pleɪd/",
+      "pp": "played",
+      "ppPron": "/pleɪd/",
+      "ex": [
+        "The children play in the park.",
+        "He plays guitar very well.",
+        "She played tennis yesterday.",
+        "Do you want to play a game?",
+        "We played soccer after school.",
+        "I don't play video games often."
+      ]
+    },
+    {
+      "id": 37,
+      "word": "help",
+      "pron": "/hɛlp/",
+      "emoji": "🆘",
+      "cat": "Noun/Verb",
+      "es": "ayuda / ayudar",
+      "past": "helped",
+      "pastPron": "/hɛlpt/",
+      "pp": "helped",
+      "ppPron": "/hɛlpt/",
+      "ex": [
+        "Can you help me, please?",
+        "She helped me with my homework.",
+        "I need help with this box.",
+        "He always helps his neighbors.",
+        "Thank you for your help.",
+        "We helped clean the house."
+      ]
+    },
+    {
+      "id": 38,
+      "word": "read",
+      "pron": "/riːd/",
+      "emoji": "📚",
+      "cat": "Verb",
+      "es": "leer",
+      "past": "read",
+      "pastPron": "/rɛd/",
+      "pp": "read",
+      "ppPron": "/rɛd/",
+      "ex": [
+        "I like to read before bed.",
+        "She reads the newspaper every day.",
+        "He read the whole book in one day.",
+        "Can you read this for me?",
+        "We read a story in class.",
+        "They love to read magazines."
+      ]
+    },
+    {
+      "id": 39,
+      "word": "write",
+      "pron": "/raɪt/",
+      "emoji": "✍️",
+      "cat": "Verb",
+      "es": "escribir",
+      "past": "wrote",
+      "pastPron": "/roʊt/",
+      "pp": "written",
+      "ppPron": "/ˈrɪt.ən/",
+      "ex": [
+        "I write in my diary every night.",
+        "She wrote a letter to her friend.",
+        "Can you write your name here?",
+        "He writes very well.",
+        "We have written ten pages.",
+        "Please write the answer on the board."
+      ]
+    },
+    {
+      "id": 40,
+      "word": "listen",
+      "pron": "/ˈlɪs.ən/",
+      "emoji": "👂",
+      "cat": "Verb",
+      "es": "escuchar",
+      "past": "listened",
+      "pastPron": "/ˈlɪs.ənd/",
+      "pp": "listened",
+      "ppPron": "/ˈlɪs.ənd/",
+      "ex": [
+        "Listen to the teacher, please.",
+        "I like to listen to music.",
+        "She listened carefully to the instructions.",
+        "He never listens to me.",
+        "We listened to a podcast yesterday.",
+        "Listen! Do you hear that sound?"
+      ]
+    },
+    {
+      "id": 41,
+      "word": "big",
+      "pron": "/bɪɡ/",
+      "emoji": "🐘",
+      "cat": "Adjective",
+      "es": "grande",
+      "ex": [
+        "The elephant is very big.",
+        "She lives in a big house.",
+        "He has a big family.",
+        "This is a big problem.",
+        "The city is too big for me.",
+        "I want a big piece of cake."
+      ]
+    },
+    {
+      "id": 42,
+      "word": "small",
+      "pron": "/smɔːl/",
+      "emoji": "🐜",
+      "cat": "Adjective",
+      "es": "pequeño/a",
+      "ex": [
+        "The ant is very small.",
+        "She has a small dog.",
+        "Our apartment is small but nice.",
+        "He lives in a small town.",
+        "This shirt is too small for me.",
+        "I need a small bag."
+      ]
+    },
+    {
+      "id": 43,
+      "word": "good",
+      "pron": "/ɡʊd/",
+      "emoji": "👍",
+      "cat": "Adjective",
+      "es": "bueno/a",
+      "ex": [
+        "This is a very good book.",
+        "She is a good student.",
+        "The weather is good today.",
+        "He is a good friend.",
+        "Good morning! How are you?",
+        "The food tastes really good."
+      ]
+    },
+    {
+      "id": 44,
+      "word": "bad",
+      "pron": "/bæd/",
+      "emoji": "👎",
+      "cat": "Adjective",
+      "es": "malo/a",
+      "ex": [
+        "The weather is bad today.",
+        "I feel bad about what happened.",
+        "That was a bad idea.",
+        "The milk smells bad.",
+        "He had a bad day at work.",
+        "This is not bad at all."
+      ]
+    },
+    {
+      "id": 45,
+      "word": "happy",
+      "pron": "/ˈhæp.i/",
+      "emoji": "😊",
+      "cat": "Adjective",
+      "es": "feliz / contento",
+      "ex": [
+        "I am very happy today.",
+        "She looks happy in the photo.",
+        "The children are happy at the park.",
+        "He is happy with his new job.",
+        "Happy birthday to you!",
+        "We are happy to see you."
+      ]
+    },
+    {
+      "id": 46,
+      "word": "sad",
+      "pron": "/sæd/",
+      "emoji": "😢",
+      "cat": "Adjective",
+      "es": "triste",
+      "ex": [
+        "She feels sad today.",
+        "The movie was very sad.",
+        "I am sad because my friend left.",
+        "He looks sad — what happened?",
+        "Don't be sad, things will get better.",
+        "It was a sad story."
+      ]
+    },
+    {
+      "id": 47,
+      "word": "hot",
+      "pron": "/hɒt/",
+      "emoji": "🔥",
+      "cat": "Adjective",
+      "es": "caliente / caluroso",
+      "ex": [
+        "The coffee is very hot.",
+        "It is hot outside today.",
+        "Be careful, the pan is hot.",
+        "I don't like hot weather.",
+        "The soup is too hot to eat.",
+        "Summer is very hot in this city."
+      ]
+    },
+    {
+      "id": 48,
+      "word": "cold",
+      "pron": "/koʊld/",
+      "emoji": "❄️",
+      "cat": "Adjective",
+      "es": "frío",
+      "ex": [
+        "It is very cold today.",
+        "The water is too cold.",
+        "I feel cold without my jacket.",
+        "Winter is very cold here.",
+        "She has cold hands.",
+        "Would you like a cold drink?"
+      ]
+    },
+    {
+      "id": 49,
+      "word": "new",
+      "pron": "/njuː/",
+      "emoji": "✨",
+      "cat": "Adjective",
+      "es": "nuevo/a",
+      "ex": [
+        "I have a new phone.",
+        "She started a new job.",
+        "Is there anything new?",
+        "We moved to a new apartment.",
+        "He bought a new car.",
+        "I want to learn new things."
+      ]
+    },
+    {
+      "id": 50,
+      "word": "old",
+      "pron": "/oʊld/",
+      "emoji": "👴",
+      "cat": "Adjective",
+      "es": "viejo/a / antiguo",
+      "ex": [
+        "My grandfather is very old.",
+        "This is an old building.",
+        "She has an old car.",
+        "How old are you?",
+        "The old house needs repairs.",
+        "He is my old friend from school."
+      ]
+    },
+    {
+      "id": 51,
+      "word": "easy",
+      "pron": "/ˈiː.zi/",
+      "emoji": "✅",
+      "cat": "Adjective",
+      "es": "fácil",
+      "ex": [
+        "This exercise is easy.",
+        "English is not easy to learn.",
+        "The test was very easy.",
+        "It's easy to make mistakes.",
+        "She found an easy solution.",
+        "Cooking pasta is easy."
+      ]
+    },
+    {
+      "id": 52,
+      "word": "difficult",
+      "pron": "/ˈdɪf.ɪ.kəlt/",
+      "emoji": "😰",
+      "cat": "Adjective",
+      "es": "difícil",
+      "ex": [
+        "This question is very difficult.",
+        "Math is difficult for me.",
+        "The exam was really difficult.",
+        "It's difficult to understand him.",
+        "Learning a new language is difficult.",
+        "She solved a difficult problem."
+      ]
+    },
+    {
+      "id": 53,
+      "word": "beautiful",
+      "pron": "/ˈbjuː.tɪ.fəl/",
+      "emoji": "🌸",
+      "cat": "Adjective",
+      "es": "hermoso/a / bonito/a",
+      "ex": [
+        "The sunset is beautiful.",
+        "She has a beautiful smile.",
+        "What a beautiful day!",
+        "The flowers are very beautiful.",
+        "He painted a beautiful picture.",
+        "This is a beautiful city."
+      ]
+    },
+    {
+      "id": 54,
+      "word": "hungry",
+      "pron": "/ˈhʌŋ.ɡri/",
+      "emoji": "🤤",
+      "cat": "Adjective",
+      "es": "hambriento / con hambre",
+      "ex": [
+        "I am very hungry.",
+        "Are you hungry? Let's eat.",
+        "The children are always hungry.",
+        "She was too hungry to wait.",
+        "I get hungry in the afternoon.",
+        "He is hungry because he skipped lunch."
+      ]
+    },
+    {
+      "id": 55,
+      "word": "tired",
+      "pron": "/taɪərd/",
+      "emoji": "😩",
+      "cat": "Adjective",
+      "es": "cansado/a",
+      "ex": [
+        "I am very tired today.",
+        "She looks tired after work.",
+        "He was too tired to cook.",
+        "The children are tired after playing.",
+        "I'm tired of waiting.",
+        "We were tired but happy."
+      ]
+    },
+    {
+      "id": 56,
+      "word": "very",
+      "pron": "/ˈvɛr.i/",
+      "emoji": "💯",
+      "cat": "Adverb",
+      "es": "muy",
+      "ex": [
+        "She is very smart.",
+        "The movie was very good.",
+        "I am very happy today.",
+        "It is very cold outside.",
+        "He runs very fast.",
+        "Thank you very much!"
+      ]
+    },
+    {
+      "id": 57,
+      "word": "always",
+      "pron": "/ˈɔːl.weɪz/",
+      "emoji": "🔁",
+      "cat": "Adverb",
+      "es": "siempre",
+      "ex": [
+        "She always arrives on time.",
+        "I always eat breakfast.",
+        "He is always happy.",
+        "We always go to the same restaurant.",
+        "They always help each other.",
+        "I always forget my keys."
+      ]
+    },
+    {
+      "id": 58,
+      "word": "never",
+      "pron": "/ˈnɛv.ər/",
+      "emoji": "🚫",
+      "cat": "Adverb",
+      "es": "nunca",
+      "ex": [
+        "I never eat fast food.",
+        "She never arrives late.",
+        "He has never been to Paris.",
+        "We never watch TV in the morning.",
+        "I will never forget this day.",
+        "They never argue."
+      ]
+    },
+    {
+      "id": 59,
+      "word": "sometimes",
+      "pron": "/ˈsʌm.taɪmz/",
+      "emoji": "🤷",
+      "cat": "Adverb",
+      "es": "a veces",
+      "ex": [
+        "I sometimes go to the gym.",
+        "She sometimes works on Saturdays.",
+        "Sometimes I feel tired.",
+        "He sometimes forgets his lunch.",
+        "We sometimes eat out on Fridays.",
+        "Sometimes it rains in the afternoon."
+      ]
+    },
+    {
+      "id": 60,
+      "word": "here",
+      "pron": "/hɪər/",
+      "emoji": "📍",
+      "cat": "Adverb",
+      "es": "aquí",
+      "ex": [
+        "Come here, please.",
+        "I live here.",
+        "She is not here right now.",
+        "The bus stops here.",
+        "We like it here.",
+        "Put the box here."
+      ]
+    },
+    {
+      "id": 61,
+      "word": "today",
+      "pron": "/təˈdeɪ/",
+      "emoji": "📅",
+      "cat": "Adverb",
+      "es": "hoy",
+      "ex": [
+        "Today is a beautiful day.",
+        "What are you doing today?",
+        "I have a meeting today.",
+        "She is not working today.",
+        "We start school today.",
+        "The store is closed today."
+      ]
+    },
+    {
+      "id": 62,
+      "word": "hello",
+      "pron": "/həˈloʊ/",
+      "emoji": "👋",
+      "cat": "Common Phrase",
+      "es": "hola",
+      "ex": [
+        "Hello! How are you?",
+        "Hello, my name is Anna.",
+        "She said hello to everyone.",
+        "Hello, can I help you?",
+        "He waved and said hello.",
+        "Hello! Nice to meet you."
+      ]
+    },
+    {
+      "id": 63,
+      "word": "goodbye",
+      "pron": "/ɡʊdˈbaɪ/",
+      "emoji": "👋",
+      "cat": "Common Phrase",
+      "es": "adiós",
+      "ex": [
+        "Goodbye! See you tomorrow.",
+        "She said goodbye to her friends.",
+        "It was hard to say goodbye.",
+        "Goodbye and take care.",
+        "He waved goodbye from the window.",
+        "We said goodbye at the airport."
+      ]
+    },
+    {
+      "id": 64,
+      "word": "please",
+      "pron": "/pliːz/",
+      "emoji": "🙏",
+      "cat": "Common Phrase",
+      "es": "por favor",
+      "ex": [
+        "Can you help me, please?",
+        "Please sit down.",
+        "A glass of water, please.",
+        "Please be quiet.",
+        "Could you repeat that, please?",
+        "Please close the door."
+      ]
+    },
+    {
+      "id": 65,
+      "word": "thank you",
+      "pron": "/θæŋk juː/",
+      "emoji": "🙏",
+      "cat": "Common Phrase",
+      "es": "gracias",
+      "ex": [
+        "Thank you for your help.",
+        "Thank you very much!",
+        "She said thank you to the waiter.",
+        "Thank you for coming.",
+        "I want to say thank you.",
+        "Thank you, that's very kind."
+      ]
+    },
+    {
+      "id": 66,
+      "word": "sorry",
+      "pron": "/ˈsɒr.i/",
+      "emoji": "😔",
+      "cat": "Common Phrase",
+      "es": "lo siento / disculpa",
+      "ex": [
+        "I'm sorry I'm late.",
+        "Sorry, I didn't hear you.",
+        "She said sorry for the mistake.",
+        "I'm sorry about your loss.",
+        "Sorry, can you say that again?",
+        "He felt sorry for what he did."
+      ]
+    },
+    {
+      "id": 67,
+      "word": "how are you",
+      "pron": "/haʊ ɑːr juː/",
+      "emoji": "😊",
+      "cat": "Common Phrase",
+      "es": "¿cómo estás?",
+      "ex": [
+        "Hello! How are you?",
+        "How are you today?",
+        "How are you doing?",
+        "Hey, how are you? Long time no see!",
+        "How are you feeling now?",
+        "Hi! How are you this morning?"
+      ]
+    },
+    {
+      "id": 68,
+      "word": "I don't understand",
+      "pron": "/aɪ doʊnt ˌʌndərˈstænd/",
+      "emoji": "😕",
+      "cat": "Common Phrase",
+      "es": "no entiendo",
+      "ex": [
+        "I don't understand this word.",
+        "Sorry, I don't understand.",
+        "I don't understand the question.",
+        "She said she doesn't understand.",
+        "I don't understand what you mean.",
+        "Can you explain? I don't understand."
+      ]
+    },
+    {
+      "id": 69,
+      "word": "how much",
+      "pron": "/haʊ mʌtʃ/",
+      "emoji": "💲",
+      "cat": "Common Phrase",
+      "es": "¿cuánto cuesta?",
+      "ex": [
+        "How much is this shirt?",
+        "How much does it cost?",
+        "How much money do you have?",
+        "How much water do we need?",
+        "How much is the ticket?",
+        "How much do I owe you?"
+      ]
+    },
+    {
+      "id": 70,
+      "word": "where is",
+      "pron": "/wɛər ɪz/",
+      "emoji": "🗺️",
+      "cat": "Common Phrase",
+      "es": "¿dónde está?",
+      "ex": [
+        "Where is the bathroom?",
+        "Where is the bus stop?",
+        "Excuse me, where is the bank?",
+        "Where is my phone?",
+        "Do you know where is the hospital?",
+        "Where is the nearest supermarket?"
+      ]
+    },
+    {
+      "id": 71,
+      "word": "I need",
+      "pron": "/aɪ niːd/",
+      "emoji": "🤲",
+      "cat": "Common Phrase",
+      "es": "necesito",
+      "ex": [
+        "I need help with this.",
+        "I need to go now.",
+        "I need a glass of water.",
+        "I need to study more.",
+        "I need your advice.",
+        "I need to rest for a while."
+      ]
+    },
+    {
+      "id": 72,
+      "word": "I like",
+      "pron": "/aɪ laɪk/",
+      "emoji": "😍",
+      "cat": "Common Phrase",
+      "es": "me gusta",
+      "ex": [
+        "I like this restaurant.",
+        "I like to travel.",
+        "I like your new haircut.",
+        "I like coffee with milk.",
+        "I like playing with my dog.",
+        "I like this song a lot."
+      ]
+    },
+    {
+      "id": 73,
+      "word": "excuse me",
+      "pron": "/ɪkˈskjuːz miː/",
+      "emoji": "🙋",
+      "cat": "Common Phrase",
+      "es": "disculpe / con permiso",
+      "ex": [
+        "Excuse me, where is the exit?",
+        "Excuse me, can I ask a question?",
+        "Excuse me, is this seat taken?",
+        "Excuse me, what time is it?",
+        "Excuse me, I need to pass.",
+        "Excuse me, do you speak English?"
+      ]
+    },
+    {
+      "id": 74,
+      "word": "nice to meet you",
+      "pron": "/naɪs tə miːt juː/",
+      "emoji": "🤝",
+      "cat": "Common Phrase",
+      "es": "mucho gusto / encantado",
+      "ex": [
+        "Hello, nice to meet you!",
+        "Nice to meet you, I'm Carlos.",
+        "It's nice to meet you finally.",
+        "She said nice to meet you and smiled.",
+        "Nice to meet you too!",
+        "He shook my hand and said nice to meet you."
+      ]
+    },
+    {
+      "id": 75,
+      "word": "see you later",
+      "pron": "/siː juː ˈleɪ.tər/",
+      "emoji": "✌️",
+      "cat": "Common Phrase",
+      "es": "nos vemos luego",
+      "ex": [
+        "Bye! See you later.",
+        "See you later at the party.",
+        "I have to go now. See you later!",
+        "She waved and said see you later.",
+        "See you later, have a great day!",
+        "Okay, see you later then."
+      ]
+    },
+    {
+      "id": 76,
+      "word": "run",
+      "pron": "/rʌn/",
+      "emoji": "🏃",
+      "cat": "Verb",
+      "es": "correr",
+      "past": "ran",
+      "pastPron": "/ræn/",
+      "pp": "run",
+      "ppPron": "/rʌn/",
+      "ex": [
+        "I run in the park every morning.",
+        "She runs very fast.",
+        "He ran to catch the bus.",
+        "The children love to run outside.",
+        "We ran five kilometers yesterday.",
+        "Don't run in the hallway!"
+      ]
+    },
+    {
+      "id": 77,
+      "word": "open",
+      "pron": "/ˈoʊ.pən/",
+      "emoji": "📭",
+      "cat": "Verb",
+      "es": "abrir",
+      "past": "opened",
+      "pastPron": "/ˈoʊ.pənd/",
+      "pp": "opened",
+      "ppPron": "/ˈoʊ.pənd/",
+      "ex": [
+        "Please open the door.",
+        "She opened the window.",
+        "The store opens at nine.",
+        "He opened his birthday presents.",
+        "Can you open this jar for me?",
+        "I opened the book and started reading."
+      ]
+    },
+    {
+      "id": 78,
+      "word": "close",
+      "pron": "/kloʊz/",
+      "emoji": "🔒",
+      "cat": "Verb",
+      "es": "cerrar",
+      "past": "closed",
+      "pastPron": "/kloʊzd/",
+      "pp": "closed",
+      "ppPron": "/kloʊzd/",
+      "ex": [
+        "Please close the window.",
+        "She closed her eyes.",
+        "The bank closes at five.",
+        "He closed the door quietly.",
+        "The store is closed on Sundays.",
+        "I closed the book and went to sleep."
+      ]
+    },
+    {
+      "id": 79,
+      "word": "fast",
+      "pron": "/fæst/",
+      "emoji": "⚡",
+      "cat": "Adjective",
+      "es": "rápido",
+      "ex": [
+        "The car is very fast.",
+        "She walks very fast.",
+        "He is a fast runner.",
+        "Time goes by so fast.",
+        "The train is faster than the bus.",
+        "Don't drive too fast!"
+      ]
+    },
+    {
+      "id": 80,
+      "word": "slow",
+      "pron": "/sloʊ/",
+      "emoji": "🐢",
+      "cat": "Adjective",
+      "es": "lento",
+      "ex": [
+        "The turtle is very slow.",
+        "Please speak slowly.",
+        "The bus is too slow.",
+        "He is a slow reader.",
+        "Traffic is very slow today.",
+        "The internet connection is slow."
+      ]
+    }
+  ]
+}

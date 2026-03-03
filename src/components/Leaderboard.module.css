@@ -1,0 +1,154 @@
+.panel {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 18px 16px;
+  width: 240px;
+  position: fixed;
+  right: 24px;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.heading {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: background 0.15s;
+}
+
+.row:hover {
+  background: #334155;
+}
+
+.rowMe {
+  composes: row;
+  background: linear-gradient(135deg, #6366F120, #4F46E520);
+  border: 1px solid #6366F140;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+  color: #475569;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.rank {
+  min-width: 22px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+.medal {
+  min-width: 22px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #E2E8F0;
+}
+
+.nameMe {
+  composes: name;
+  font-weight: 700;
+  color: #A5B4FC;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 12px;
+  color: #38BDF8;
+  background: #0F172A;
+  padding: 2px 8px;
+  border-radius: 6px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.totalRow {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #334155;
+  font-size: 11px;
+  color: #64748B;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mobileToggle {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .panel {
+    position: static;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mobileToggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(145deg, #1E293B, #0F172A);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    color: #E2E8F0;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .panel {
+    display: none;
+    position: static;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 12px;
+  }
+
+  .panelOpen {
+    display: block;
+  }
+}

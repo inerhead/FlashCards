@@ -1,0 +1,87 @@
+.wrap {
+  margin-top: 14px;
+  background: #1E293B;
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid #334155;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #94A3B8;
+  margin-bottom: 6px;
+}
+
+.track {
+  background: #0F172A;
+  border-radius: 99px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #4F46E5, #06B6D4);
+  transition: width 0.5s ease;
+  width: var(--progress);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.pct {
+  font-size: 11px;
+  color: #64748B;
+}
+
+/* Reset confirm */
+.confirmRow {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.confirmText {
+  font-size: 11px;
+  color: #F87171;
+}
+
+.confirmYes {
+  background: #DC2626;
+  border: none;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.confirmNo {
+  background: #334155;
+  border: none;
+  color: #94A3B8;
+  padding: 2px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.resetLink {
+  background: none;
+  border: none;
+  color: #475569;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: underline;
+}
