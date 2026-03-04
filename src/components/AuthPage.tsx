@@ -7,7 +7,6 @@ export default function AuthPage() {
   const { login, register } = useAuth();
   const [mode, setMode] = useState<"login" | "register">("login");
   const [email, setEmail] = useState("");
-  const [displayName, setDisplayName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -26,7 +25,7 @@ export default function AuthPage() {
 
     try {
       if (isRegister) {
-        await register(email, password, displayName);
+        await register(email, password);
       } else {
         await login(email, password);
       }
@@ -67,21 +66,6 @@ export default function AuthPage() {
               required
             />
           </div>
-
-          {isRegister && (
-            <div className={s.inputWrap}>
-              <span className={s.inputIcon}>👤</span>
-              <input
-                className={s.input}
-                type="text"
-                placeholder={t.displayNamePlaceholder}
-                autoComplete="name"
-                value={displayName}
-                onChange={(e) => setDisplayName(e.target.value)}
-                required
-              />
-            </div>
-          )}
 
           <div className={s.inputWrap}>
             <span className={s.inputIcon}>🔒</span>
