@@ -21,6 +21,16 @@ const en = {
   switchToLogin: "Sign in",
   switchToRegister: "Sign up",
   unexpectedError: "Unexpected error",
+  forgotPassword: "Forgot password?",
+  forgotPasswordSubtitle: "Enter your email to receive a reset link",
+  sendResetLink: "Send reset link",
+  resetEmailSent: "Check your email for the reset link",
+  rememberPassword: "Remember your password? ",
+  resetPasswordTitle: "Reset Password",
+  resetPasswordSubtitle: "Enter your new password below",
+  newPasswordPlaceholder: "New password",
+  resetPasswordSubmit: "Update Password",
+  resetPasswordSuccess: "Password updated successfully! You can now continue using the app.",
 
   // Level Select
   selectLevel: "Select a level to begin",
