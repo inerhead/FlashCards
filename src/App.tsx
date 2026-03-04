@@ -13,7 +13,6 @@ import ProgressBar from "./components/ProgressBar";
 import Controls from "./components/Controls";
 import ReviewBanner from "./components/ReviewBanner";
 import Leaderboard from "./components/Leaderboard";
-import ResetPassword from "./components/ResetPassword";
 import s from "./App.module.css";
 
 function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void }) {
@@ -297,7 +296,7 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
 }
 
 export default function App() {
-  const { user, loading, passwordRecovery } = useAuth();
+  const { user, loading } = useAuth();
   const [selectedLevel, setSelectedLevel] = useState<LevelMeta | null>(null);
 
   if (loading) {
@@ -312,8 +311,6 @@ export default function App() {
   }
 
   if (!user) return <AuthPage />;
-
-  if (passwordRecovery) return <ResetPassword />;
 
   if (!selectedLevel) {
     return <LevelSelect onSelect={setSelectedLevel} />;
