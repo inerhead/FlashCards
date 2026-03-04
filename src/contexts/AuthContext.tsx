@@ -47,6 +47,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [passwordRecovery, setPasswordRecovery] = useState(false);
 
   useEffect(() => {
+    const hashParams = new URLSearchParams(
+      window.location.hash.replace("#", ""),
+    );
+    if (hashParams.get("type") === "recovery") {
+      setPasswordRecovery(true);
+    }
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(userFromSession(session));
       setLoading(false);
