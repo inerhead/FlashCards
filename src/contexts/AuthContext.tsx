@@ -6,7 +6,7 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
-import { supabase } from "../lib/supabase";
+import { supabase, isRecoveryUrl } from "../lib/supabase";
 import type { Session } from "@supabase/supabase-js";
 
 export interface AuthUser {
@@ -44,16 +44,9 @@ function userFromSession(session: Session | null): AuthUser | null {
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState(true);
-  const [passwordRecovery, setPasswordRecovery] = useState(false);
+  const [passwordRecovery, setPasswordRecovery] = useState(isRecoveryUrl);
 
   useEffect(() => {
-    const hashParams = new URLSearchParams(
-      window.location.hash.replace("#", ""),
-    );
-    if (hashParams.get("type") === "recovery") {
-      setPasswordRecovery(true);
-    }
-
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(userFromSession(session));
       setLoading(false);

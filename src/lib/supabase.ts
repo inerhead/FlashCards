@@ -7,4 +7,9 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error("Missing VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY env vars");
 }
 
+// Capture recovery flag BEFORE createClient consumes the URL hash
+const _hash = window.location.hash.substring(1);
+export const isRecoveryUrl =
+  new URLSearchParams(_hash).get("type") === "recovery";
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
