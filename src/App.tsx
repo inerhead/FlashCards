@@ -201,7 +201,6 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
               📝 <span className={s.studyLabel}>Quiz ({known.size})</span>
             </button>
           )}
-          <button onClick={shuffle} title={t.btnShuffleTitle} className={s.studyBtnIcon}>🔀</button>
         </div>
       </div>
 
