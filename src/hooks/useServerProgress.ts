@@ -28,7 +28,7 @@ function toPayload(
 const DEBOUNCE_MS = 800;
 
 export function useServerProgress(
-  token: string | null,
+  userId: string | null,
   levelId: string | null,
 ): ServerProgress {
   const [known, setKnownRaw] = useState<Set<number>>(new Set());
@@ -38,13 +38,13 @@ export function useServerProgress(
 
   const pendingSave = useRef(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const tokenRef = useRef(token);
+  const userIdRef = useRef(userId);
   const levelRef = useRef(levelId);
-  tokenRef.current = token;
+  userIdRef.current = userId;
   levelRef.current = levelId;
 
   useEffect(() => {
-    if (!token || !levelId) {
+    if (!userId || !levelId) {
       setKnownRaw(new Set());
       setKnownDatesRaw(new Map());
       setLearningRaw(new Set());
@@ -53,7 +53,7 @@ export function useServerProgress(
     }
 
     setLoading(true);
-    apiGetProgress(token, levelId)
+    apiGetProgress(userId, levelId)
       .then((p) => {
         setKnownRaw(new Set(p.known));
         setKnownDatesRaw(new Map(p.knownDates));
@@ -61,21 +61,21 @@ export function useServerProgress(
       })
       .catch(() => {})
       .finally(() => setLoading(false));
-  }, [token, levelId]);
+  }, [userId, levelId]);
 
   const scheduleSave = useCallback(() => {
     pendingSave.current = true;
   }, []);
 
   useEffect(() => {
-    if (!pendingSave.current || !tokenRef.current || !levelRef.current) return;
+    if (!pendingSave.current || !userIdRef.current || !levelRef.current) return;
     pendingSave.current = false;
 
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => {
-      if (!tokenRef.current || !levelRef.current) return;
+      if (!userIdRef.current || !levelRef.current) return;
       apiSaveProgress(
-        tokenRef.current,
+        userIdRef.current,
         levelRef.current,
         toPayload(known, knownDates, learning),
       ).catch(() => {});

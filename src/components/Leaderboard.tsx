@@ -7,13 +7,13 @@ const POLL_INTERVAL = 10_000;
 const MEDALS = ["🥇", "🥈", "🥉"];
 
 interface Props {
-  token: string;
+  userId: string;
   levelId: string;
-  currentUser: string;
+  currentDisplayName: string;
   knownCount: number;
 }
 
-export default function Leaderboard({ token, levelId, currentUser, knownCount }: Props) {
+export default function Leaderboard({ userId, levelId, currentDisplayName, knownCount }: Props) {
   const [top, setTop] = useState<LeaderboardEntry[]>([]);
   const [myRank, setMyRank] = useState<number | null>(null);
   const [myScore, setMyScore] = useState(0);
@@ -25,7 +25,7 @@ export default function Leaderboard({ token, levelId, currentUser, knownCount }:
     let cancelled = false;
 
     const doFetch = () => {
-      apiGetLeaderboard(token, levelId)
+      apiGetLeaderboard(userId, levelId)
         .then((data) => {
           if (cancelled) return;
           setTop(data.top);
@@ -43,10 +43,10 @@ export default function Leaderboard({ token, levelId, currentUser, knownCount }:
       cancelled = true;
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [token, levelId]);
+  }, [userId, levelId]);
 
   useEffect(() => {
-    apiGetLeaderboard(token, levelId)
+    apiGetLeaderboard(userId, levelId)
       .then((data) => {
         setTop(data.top);
         setMyRank(data.myRank);
@@ -54,9 +54,9 @@ export default function Leaderboard({ token, levelId, currentUser, knownCount }:
         setTotalUsers(data.totalUsers);
       })
       .catch(() => {});
-  }, [token, levelId, knownCount]);
+  }, [userId, levelId, knownCount]);
 
-  const inTop = top.some((e) => e.username === currentUser);
+  const inTop = top.some((e) => e.displayName === currentDisplayName);
 
   return (
     <>
@@ -67,15 +67,15 @@ export default function Leaderboard({ token, levelId, currentUser, knownCount }:
         <h3 className={s.heading}>{t.leaderboardTitle}</h3>
         <ul className={s.list}>
           {top.map((entry, i) => {
-            const isMe = entry.username === currentUser;
+            const isMe = entry.displayName === currentDisplayName;
             return (
-              <li key={entry.username} className={isMe ? s.rowMe : s.row}>
+              <li key={entry.displayName} className={isMe ? s.rowMe : s.row}>
                 {i < 3 ? (
                   <span className={s.medal}>{MEDALS[i]}</span>
                 ) : (
                   <span className={s.rank}>{i + 1}</span>
                 )}
-                <span className={isMe ? s.nameMe : s.name}>{entry.username}</span>
+                <span className={isMe ? s.nameMe : s.name}>{entry.displayName}</span>
                 <span className={s.score}>{entry.knownCount}</span>
               </li>
             );
@@ -86,7 +86,7 @@ export default function Leaderboard({ token, levelId, currentUser, knownCount }:
               <li className={s.separator}>···</li>
               <li className={s.rowMe}>
                 <span className={s.rank}>{myRank}</span>
-                <span className={s.nameMe}>{currentUser}</span>
+                <span className={s.nameMe}>{currentDisplayName}</span>
                 <span className={s.score}>{myScore}</span>
               </li>
             </>

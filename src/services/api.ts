@@ -1,52 +1,4 @@
-const BASE = "/api";
-
-function authHeaders(token: string): HeadersInit {
-  return {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
-  };
-}
-
-async function handleResponse<T>(res: Response): Promise<T> {
-  const body = await res.json();
-  if (!res.ok) throw new Error(body.error || "Server error");
-  return body as T;
-}
-
-// --- Auth ---
-
-export interface AuthResponse {
-  token: string;
-  username: string;
-}
-
-export interface MeResponse {
-  userId: string;
-  username: string;
-}
-
-export async function apiRegister(username: string, password: string): Promise<AuthResponse> {
-  const res = await fetch(`${BASE}/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
-  return handleResponse<AuthResponse>(res);
-}
-
-export async function apiLogin(username: string, password: string): Promise<AuthResponse> {
-  const res = await fetch(`${BASE}/auth/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
-  return handleResponse<AuthResponse>(res);
-}
-
-export async function apiMe(token: string): Promise<MeResponse> {
-  const res = await fetch(`${BASE}/auth/me`, { headers: authHeaders(token) });
-  return handleResponse<MeResponse>(res);
-}
+import { supabase } from "../lib/supabase";
 
 // --- Levels ---
 
@@ -71,16 +23,65 @@ export interface WordData {
   ppPron?: string;
 }
 
-export async function apiGetLevels(): Promise<LevelMeta[]> {
-  const res = await fetch(`${BASE}/levels`);
-  return handleResponse<LevelMeta[]>(res);
+interface LevelRow {
+  id: string;
+  name: string;
+  description: string;
+  word_count: number;
 }
 
-export async function apiGetWords(token: string, levelId: string): Promise<WordData[]> {
-  const res = await fetch(`${BASE}/levels/${levelId}/words`, {
-    headers: authHeaders(token),
-  });
-  return handleResponse<WordData[]>(res);
+interface WordRow {
+  word_index: number;
+  word: string;
+  pron: string;
+  emoji: string;
+  cat: string;
+  es: string;
+  examples: string[];
+  past: string | null;
+  past_pron: string | null;
+  pp: string | null;
+  pp_pron: string | null;
+}
+
+export async function apiGetLevels(): Promise<LevelMeta[]> {
+  const { data, error } = await supabase
+    .from("levels")
+    .select("id, name, description, word_count")
+    .order("id");
+
+  if (error) throw new Error(error.message);
+
+  return (data as LevelRow[]).map((r) => ({
+    id: r.id,
+    name: r.name,
+    description: r.description,
+    wordCount: r.word_count,
+  }));
+}
+
+export async function apiGetWords(levelId: string): Promise<WordData[]> {
+  const { data, error } = await supabase
+    .from("words")
+    .select("word_index, word, pron, emoji, cat, es, examples, past, past_pron, pp, pp_pron")
+    .eq("level_id", levelId)
+    .order("word_index");
+
+  if (error) throw new Error(error.message);
+
+  return (data as WordRow[]).map((r) => ({
+    id: r.word_index,
+    word: r.word,
+    pron: r.pron,
+    emoji: r.emoji,
+    cat: r.cat,
+    es: r.es,
+    ex: r.examples,
+    ...(r.past ? { past: r.past } : {}),
+    ...(r.past_pron ? { pastPron: r.past_pron } : {}),
+    ...(r.pp ? { pp: r.pp } : {}),
+    ...(r.pp_pron ? { ppPron: r.pp_pron } : {}),
+  }));
 }
 
 // --- Progress (per level) ---
@@ -91,30 +92,60 @@ export interface ProgressPayload {
   learning: number[];
 }
 
-export async function apiGetProgress(token: string, levelId: string): Promise<ProgressPayload> {
-  const res = await fetch(`${BASE}/progress/${levelId}`, {
-    headers: authHeaders(token),
-  });
-  return handleResponse<ProgressPayload>(res);
+interface ProgressRow {
+  known: number[];
+  known_dates: [number, number][];
+  learning: number[];
+}
+
+export async function apiGetProgress(userId: string, levelId: string): Promise<ProgressPayload> {
+  const { data, error } = await supabase
+    .from("user_progress")
+    .select("known, known_dates, learning")
+    .eq("user_id", userId)
+    .eq("level_id", levelId)
+    .maybeSingle();
+
+  if (error) throw new Error(error.message);
+
+  if (!data) {
+    return { known: [], knownDates: [], learning: [] };
+  }
+
+  const row = data as ProgressRow;
+  return {
+    known: row.known,
+    knownDates: row.known_dates,
+    learning: row.learning,
+  };
 }
 
 export async function apiSaveProgress(
-  token: string,
+  userId: string,
   levelId: string,
   progress: ProgressPayload,
 ): Promise<void> {
-  const res = await fetch(`${BASE}/progress/${levelId}`, {
-    method: "PUT",
-    headers: authHeaders(token),
-    body: JSON.stringify(progress),
-  });
-  await handleResponse(res);
+  const { error } = await supabase
+    .from("user_progress")
+    .upsert(
+      {
+        user_id: userId,
+        level_id: levelId,
+        known: progress.known,
+        known_dates: progress.knownDates,
+        learning: progress.learning,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "user_id,level_id" },
+    );
+
+  if (error) throw new Error(error.message);
 }
 
 // --- Leaderboard (per level) ---
 
 export interface LeaderboardEntry {
-  username: string;
+  displayName: string;
   knownCount: number;
 }
 
@@ -125,12 +156,62 @@ export interface LeaderboardResponse {
   totalUsers: number;
 }
 
+interface LeaderboardRow {
+  level_id: string;
+  user_id: string;
+  display_name: string;
+  known_count: number;
+  rank: number;
+}
+
 export async function apiGetLeaderboard(
-  token: string,
+  userId: string,
   levelId: string,
 ): Promise<LeaderboardResponse> {
-  const res = await fetch(`${BASE}/leaderboard/${levelId}`, {
-    headers: authHeaders(token),
-  });
-  return handleResponse<LeaderboardResponse>(res);
+  const { data, error } = await supabase
+    .from("leaderboard_ranked")
+    .select("user_id, display_name, known_count, rank")
+    .eq("level_id", levelId)
+    .order("rank")
+    .limit(15);
+
+  if (error) throw new Error(error.message);
+
+  const rows = data as LeaderboardRow[];
+
+  const top: LeaderboardEntry[] = rows.map((r) => ({
+    displayName: r.display_name,
+    knownCount: r.known_count,
+  }));
+
+  const myRow = rows.find((r) => r.user_id === userId);
+  let myRank: number | null = myRow?.rank ?? null;
+  let myScore = myRow?.known_count ?? 0;
+
+  if (!myRow) {
+    const { data: fullData } = await supabase
+      .from("leaderboard_ranked")
+      .select("rank, known_count")
+      .eq("level_id", levelId)
+      .eq("user_id", userId)
+      .maybeSingle();
+
+    if (fullData) {
+      const full = fullData as { rank: number; known_count: number };
+      myRank = full.rank;
+      myScore = full.known_count;
+    }
+  }
+
+  const { count } = await supabase
+    .from("leaderboard")
+    .select("id", { count: "exact", head: true })
+    .eq("level_id", levelId);
+
+  return {
+    top,
+    myRank,
+    myScore,
+    totalUsers: count ?? 0,
+  };
 }

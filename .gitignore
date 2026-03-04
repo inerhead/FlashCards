@@ -1,6 +1,5 @@
 # Dependencies
 node_modules/
-server/node_modules/
 
 # Build output
 dist/
@@ -9,6 +8,7 @@ dist/
 .env
 .env.*
 !.env.example
+# Temp files
 .temp.env
 
 # Vite
@@ -35,5 +35,5 @@ Thumbs.db
 *.swo
 *~
 
-# Docker (local overrides)
-docker-compose.override.yml
+# Supabase
+supabase/.temp/

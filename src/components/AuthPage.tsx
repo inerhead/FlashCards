@@ -6,7 +6,8 @@ import s from "./AuthPage.module.css";
 export default function AuthPage() {
   const { login, register } = useAuth();
   const [isRegister, setIsRegister] = useState(false);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -24,9 +25,9 @@ export default function AuthPage() {
 
     try {
       if (isRegister) {
-        await register(username, password);
+        await register(email, password, displayName);
       } else {
-        await login(username, password);
+        await login(email, password);
       }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : t.unexpectedError);
@@ -48,16 +49,32 @@ export default function AuthPage() {
           {error && <div className={s.error}>{error}</div>}
 
           <div className={s.inputWrap}>
-            <span className={s.inputIcon}>👤</span>
+            <span className={s.inputIcon}>✉️</span>
             <input
               className={s.input}
-              type="text"
-              placeholder={t.usernamePlaceholder}
-              autoComplete="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              type="email"
+              placeholder={t.emailPlaceholder}
+              autoComplete="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
+
+          {isRegister && (
+            <div className={s.inputWrap}>
+              <span className={s.inputIcon}>👤</span>
+              <input
+                className={s.input}
+                type="text"
+                placeholder={t.displayNamePlaceholder}
+                autoComplete="name"
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+                required
+              />
+            </div>
+          )}
 
           <div className={s.inputWrap}>
             <span className={s.inputIcon}>🔒</span>
@@ -68,6 +85,7 @@ export default function AuthPage() {
               autoComplete={isRegister ? "new-password" : "current-password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 

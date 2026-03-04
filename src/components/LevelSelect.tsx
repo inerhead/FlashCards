@@ -14,7 +14,7 @@ interface Props {
 }
 
 export default function LevelSelect({ onSelect }: Props) {
-  const { user, token, logout } = useAuth();
+  const { user, logout } = useAuth();
   const [levels, setLevels] = useState<LevelMeta[]>([]);
   const [progress, setProgress] = useState<Record<string, LevelProgress>>({});
   const [loading, setLoading] = useState(true);
@@ -27,9 +27,9 @@ export default function LevelSelect({ onSelect }: Props) {
   }, []);
 
   useEffect(() => {
-    if (!token || levels.length === 0) return;
+    if (!user || levels.length === 0) return;
     levels.forEach((level) => {
-      apiGetProgress(token, level.id)
+      apiGetProgress(user.id, level.id)
         .then((p) => {
           setProgress((prev) => ({
             ...prev,
@@ -38,7 +38,7 @@ export default function LevelSelect({ onSelect }: Props) {
         })
         .catch(() => {});
     });
-  }, [token, levels]);
+  }, [user, levels]);
 
   return (
     <div className={s.backdrop}>
@@ -49,7 +49,7 @@ export default function LevelSelect({ onSelect }: Props) {
       </div>
 
       <div className={s.userRow}>
-        <span className={s.userBadge}>👤 {user?.username}</span>
+        <span className={s.userBadge}>👤 {user?.displayName}</span>
         <button className={s.logoutBtn} onClick={logout}>{t.logout}</button>
       </div>
 

@@ -7,7 +7,8 @@ const en = {
   // Auth
   authSubtitleLogin: "Sign in to continue",
   authSubtitleRegister: "Create your account to get started",
-  usernamePlaceholder: "Username",
+  emailPlaceholder: "Email",
+  displayNamePlaceholder: "Display name",
   passwordPlaceholder: "Password",
   confirmPasswordPlaceholder: "Confirm password",
   passwordsMatch: "✓ Passwords match",

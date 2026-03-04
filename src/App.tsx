@@ -16,7 +16,7 @@ import Leaderboard from "./components/Leaderboard";
 import s from "./App.module.css";
 
 function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void }) {
-  const { user, token, logout } = useAuth();
+  const { user, logout } = useAuth();
 
   const {
     known,
@@ -26,7 +26,7 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
     setKnownDates,
     setLearning,
     loading: progressLoading,
-  } = useServerProgress(token, level.id);
+  } = useServerProgress(user?.id ?? null, level.id);
 
   const [words, setWords] = useState<Word[]>([]);
   const [wordsLoading, setWordsLoading] = useState(true);
@@ -41,9 +41,9 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
   const [quizCount, setQuizCount] = useState(0);
 
   useEffect(() => {
-    if (!token) return;
+    if (!user) return;
     setWordsLoading(true);
-    apiGetWords(token, level.id)
+    apiGetWords(level.id)
       .then((data) => {
         const w = data as Word[];
         setWords(w);
@@ -51,7 +51,7 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
       })
       .catch(() => {})
       .finally(() => setWordsLoading(false));
-  }, [token, level.id]);
+  }, [user, level.id]);
 
   const oldestKnownIds = useMemo(() => {
     if (!quizKnownMode || quizCount <= 0) return new Set<number>();
@@ -152,12 +152,12 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
 
   return (
     <div className={s.shell}>
-      {token && user && (
+      {user && (
         <div className={s.leaderboardWrap}>
           <Leaderboard
-            token={token}
+            userId={user.id}
             levelId={level.id}
-            currentUser={user.username}
+            currentDisplayName={user.displayName}
             knownCount={known.size}
           />
         </div>
@@ -168,7 +168,7 @@ function FlashCardsApp({ level, onBack }: { level: LevelMeta; onBack: () => void
           <div>
             <h1 className={s.title}>{level.name}</h1>
             <p className={s.subtitle}>
-              {user?.username} · {words.length} {t.headerWords}
+              {user?.displayName} · {words.length} {t.headerWords}
             </p>
           </div>
           <div className={s.navActions}>
